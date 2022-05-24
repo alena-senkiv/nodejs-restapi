@@ -5,7 +5,7 @@ const updateById = async (req, res) => {
   const { contactId } = req.params;
   const result = await contactsOperations.updateContact(contactId, req.body);
   if (!result) {
-    throw new NotFound(`Contact with id=${contactId} not found`);
+    throw new NotFound(`Not found`);
   }
   res.json({
     status: "success",

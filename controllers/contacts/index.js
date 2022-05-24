@@ -1,8 +1,8 @@
 const getAll = require("./getAll");
-const getById = require("./getAll");
-const add = require("./getAll");
-const removeById = require("./getAll");
-const updateById = require("./getAll");
+const getById = require("./getById");
+const add = require("./add");
+const removeById = require("./removeById");
+const updateById = require("./updateById");
 
 module.exports = {
   getAll,
