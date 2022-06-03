@@ -4,9 +4,9 @@ const validation = (schema) => {
 
     if (error) {
       error.status = 400;
-      !req._body
-        ? (error.message = "missing fields")
-        : (error.message = "missing required name field");
+      if (!req._body) {
+        error.message = "missing fields";
+      }
 
       next(error);
     }
