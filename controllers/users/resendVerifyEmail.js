@@ -3,7 +3,6 @@ const { User } = require("../../models");
 const { sendEmail } = require("../../helpers");
 
 const resendVerifyEmail = async (req, res) => {
-  console.log(req);
   const { email } = req.body;
   const user = await User.findOne({ email });
 
